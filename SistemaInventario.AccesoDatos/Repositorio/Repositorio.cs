@@ -25,14 +25,14 @@ namespace SistemaInventario.AccesoDatos.Repositorio
 
         public async Task Agregar(T entidad)
         {
-            await dbSet.AddAsync(entidad);    // insert into Table
-            throw new NotImplementedException();
+             await dbSet.AddAsync(entidad);    // insert into Table
+            //throw new NotImplementedException();
         }
 
         public async Task<T> Obtener(int id)
         {
             return await dbSet.FindAsync(id);    // select * from (Solo por Id)
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public async Task<IEnumerable<T>> ObtenerTodos(Expression<Func<T, bool>> filtro = null, 
